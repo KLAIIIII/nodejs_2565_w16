@@ -29,15 +29,18 @@ app.use((req,res,next)=>{
     next()
 })
 
-app.use(morgan('dev'))
+// app.use(morgan('dev'))
 
-// // http://localhost${PORT}
-// app.get('/',(req,res)=>{
-//     // return res.send("Home page")
-//     return res.json({
-//         message: "Home page"
-//     })
-// })
+// // // http://localhost${PORT}
+// // app.get('/',(req,res)=>{
+// //     // return res.send("Home page")
+// //     return res.json({
+// //         message: "Home page"
+// //     })
+// // })
+
+// // set template engine
+app.set("view engine","ejs")
 
 app.use("", require('./routes/routes'))
 
