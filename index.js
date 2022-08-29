@@ -31,13 +31,16 @@ app.use((req,res,next)=>{
 
 app.use(morgan('dev'))
 
-// http://localhost${PORT}
-app.get('/',(req,res)=>{
-    // return res.send("Home page")
-    return res.json({
-        message: "Home page"
-    })
-})
+// // http://localhost${PORT}
+// app.get('/',(req,res)=>{
+//     // return res.send("Home page")
+//     return res.json({
+//         message: "Home page"
+//     })
+// })
+
+app.use("", require('./routes/routes'))
+
 app.listen(PORT,(req,res)=>{
     console.log(`Server running at http://localhost:${PORT}`)
 })
