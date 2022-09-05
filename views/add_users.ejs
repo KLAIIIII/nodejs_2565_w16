@@ -3,7 +3,7 @@
 
 <div class="container mt-2 shadow">
     <div class="row">
-        <div class="col-md-12 mx-auto mt-3">
+        <div class="col-md-11 mx-auto mt-3">
 
             <div class="card shadow">
                 <div class="card-header">
@@ -13,8 +13,33 @@
                     </h3>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body p-4">
+                    <form action="/add" method="post" enctype="multipart/form-data">
+                        <div class="md-3">
+                            <label for="" class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter name" required />
+                        </div>
 
+                        <div class="md-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="text" name="email" class="form-control" placeholder="Enter email" required />
+                        </div>
+
+                        <div class="md-3">
+                            <label for="" class="form-label">Phone</label>
+                            <input type="text" name="phone" class="form-control" placeholder="Enter phone" required />
+                        </div>
+
+                        <div class="md-3">
+                            <label for="" class="form-label">Selected Image</label>
+                            <input type="file" name="Image" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3 d-grid">
+                            <input type="submit" class="btn btn-dark mt-2" value="Add">
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>
