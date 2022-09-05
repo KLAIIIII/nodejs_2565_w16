@@ -1,42 +1,41 @@
 <%- include('./layout/head') %> 
 <%- include('./layout/navbar') %> 
 
-<div class="container mt-2 shadow">
+<div class="container mt-2">
     <div class="row">
-        <div class="col-md-11 mx-auto mt-3">
+        <div class="col-md-10 mx-auto mt-5">
 
             <div class="card shadow">
-                <div class="card-header">
-                    <h3>
-                        Add New Users
-                        <a href="/" class="btn btn-dark btn-sm float-end">BACK</a>
+                <div class="card-header text-white bg-warning">
+                    <h3>Add New User
+                        <a href="/" class="btn btn-light btn-sm float-end">Back</a>
                     </h3>
                 </div>
-
                 <div class="card-body p-4">
                     <form action="/add" method="post" enctype="multipart/form-data">
-                        <div class="md-3">
+
+                        <div class="mb-3">
                             <label for="" class="form-label">Name</label>
                             <input type="text" name="name" class="form-control" placeholder="Enter name" required />
                         </div>
 
-                        <div class="md-3">
+                        <div class="mb-3">
                             <label for="" class="form-label">Email</label>
-                            <input type="text" name="email" class="form-control" placeholder="Enter email" required />
+                            <input type="email" name="email" class="form-control" placeholder="Enter Email" required />
                         </div>
 
-                        <div class="md-3">
+                        <div class="mb-3">
                             <label for="" class="form-label">Phone</label>
                             <input type="text" name="phone" class="form-control" placeholder="Enter phone" required />
                         </div>
 
-                        <div class="md-3">
+                        <div class="mb-3">
                             <label for="" class="form-label">Selected Image</label>
-                            <input type="file" name="Image" class="form-control" required />
+                            <input type="file" name="image" class="form-control" required />
                         </div>
 
                         <div class="mb-3 d-grid">
-                            <input type="submit" class="btn btn-dark mt-2" value="Add">
+                            <input type="submit" class="btn btn-warning" value="Add User">
                         </div>
 
                     </form>
@@ -45,5 +44,4 @@
         </div>
     </div>
 </div>
-
 <%- include('./layout/footer') %> 
