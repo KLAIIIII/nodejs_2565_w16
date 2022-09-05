@@ -18,6 +18,27 @@ const upload = multer({
     storage:storage,
 }).single("image")
 
+// Inser user into database rou
+router.post('/add',(req,res)=>{
+    const user = new User ({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        image: req.body.image
+    })
+    user.save((err)=>{
+        if(err){
+            req.json({message:err.message,type:"warning"})
+        }else{
+            req.session.message={
+                type:"success",
+                message:"User added successfully!"
+            }
+            res.redirect("/")
+        }
+    })
+})
+
 router.get('/', (req, res) => {
     return res.render("index", { title: "Home Page" })
 })
